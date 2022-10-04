@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --primary: #33313b;
+  --secondary: #007880;
+  --buttons: #eee;
+}
+
+body {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.btn {
+  background: var(--secondary);
+  color: var(--buttons);
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
