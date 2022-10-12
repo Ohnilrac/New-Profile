@@ -40,10 +40,6 @@ nav {
   text-align: center;
 }
 
-nav > h3 {
-  font-size: 2rem;
-}
-
 #buttons {
   display: flex;
   flex-direction: column;
