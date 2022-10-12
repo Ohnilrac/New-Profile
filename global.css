@@ -8,9 +8,17 @@
 :root {
   font-size: 62.5%;
 
+  /* CORES */
   --primary: #33313b;
   --secondary: #007880;
   --buttons: #eee;
+
+  /* TRANSIÇÕES */
+
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-04: all 0.4s ease;
+  --trans-05: all 0.5s ease;
 }
 
 body {
