@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
   position: fixed;
   left: 0;
   top: 0;
@@ -8,20 +8,68 @@
   background: var(--secondary);
 }
 
-.sidebar li{
+.sidebar .img-text img {
+  width: 4rem;
+  border-radius: 8px;
+}
+
+.sidebar .img{
+  min-width: 6rem;
   display: flex;
   align-items: center;
-  
+}
+
+.sidebar .text {
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.sidebar .text span:first-child {
+  font-size: 3rem;
+}
+.sidebar .text span:last-child {
+  font-size: 2rem;
+}
+
+.sidebar header{
+  position: relative;
+}
+
+.sidebar header .img-text {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar header .toggle{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 50%;
+  right: -3.4rem;
+  background: var(--primary);
+  color: var(--secondary);
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 2.2rem;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+
   height: 5rem;
   margin-top: 1rem;
 }
 
-.sidebar li .nav-text{
+.sidebar li .nav-text {
   font-size: 1.6rem;
   font-weight: 600;
 }
 
-.sidebar li .icon{
+.sidebar li .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,16 +79,16 @@
 }
 
 .sidebar li .nav-text,
-.sidebar li .icon{
+.sidebar li .icon {
   color: white;
 }
 
 .sidebar li a:hover .nav-text,
-.sidebar li a:hover .icon{
+.sidebar li a:hover .icon {
   color: var(--secondary);
 }
 
-.sidebar li a{
+.sidebar li a {
   display: flex;
   align-items: center;
   border-radius: 8px;
@@ -49,23 +97,23 @@
   transition: var(--trans-03);
 }
 
-.sidebar li a:hover{
+.sidebar li a:hover {
   background: var(--primary);
 }
 
-.sidebar .menu-bar{
+.sidebar .menu-bar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between ;
-  height: calc(100% - 1rem);
+  justify-content: space-between;
+  height: calc(100% - 8rem);
 }
 
-.menu-bar .mode{
+.menu-bar .mode {
   background: var(--primary);
   border-radius: 8px;
 }
 
-.menu-bar .mode .icons-mode{
+.menu-bar .mode .icons-mode {
   display: flex;
   align-items: center;
 
@@ -73,15 +121,15 @@
   width: 6rem;
 }
 
-.menu-bar .mode i{
+.menu-bar .mode i {
   position: absolute;
 }
 
-.menu-bar .mode i.sun{
+.menu-bar .mode i.sun {
   opacity: 0;
 }
 
-.menu-bar .mode .toggle-switch{
+.menu-bar .mode .toggle-switch {
   height: 100%;
   min-width: 6rem;
   display: flex;
@@ -89,7 +137,7 @@
   justify-content: center;
 }
 
-.toggle-switch .switch{
+.toggle-switch .switch {
   background: var(--secondary);
   height: 2.2rem;
   width: 4.4rem;
@@ -98,7 +146,7 @@
   cursor: pointer;
 }
 
-.switch::before{
+.switch::before {
   content: '';
   position: absolute;
   height: 1.5rem;
@@ -106,6 +154,11 @@
   background: red;
   transform: translateY(-50%);
   top: 50%;
-  left: 5px;
+  left: 0.5rem;
   border-radius: 50%;
+  transition: var(--trans-04);
+}
+
+body.dark .switch::before {
+  left: 2.5rem;
 }

@@ -24,6 +24,13 @@
 
 body {
   background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  transition: var(--trans-05);
+}
+
+body.dark{
+  --primary: #370be6;
+  --secondary: #18e2f5;
+  --buttons: rgb(235, 92, 92);
 }
 
 .btn {
