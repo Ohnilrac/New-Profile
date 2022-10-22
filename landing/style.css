@@ -6,6 +6,11 @@
   width: 31rem;
   padding: 1rem 1.4rem;
   background: var(--secondary);
+  transition: var(--trans-05);
+}
+
+.sidebar.close{
+  width: 8.8rem;
 }
 
 .sidebar .img-text img {
@@ -20,8 +25,12 @@
 }
 
 .sidebar .text {
-  flex-direction: column;
   font-weight: 600;
+}
+
+.sidebar.close .text,
+.sidebar.close .nav-text{
+  display: none;
 }
 
 .sidebar .text span:first-child {
@@ -45,15 +54,19 @@
   width: 25px;
   position: absolute;
   top: 50%;
-  right: -3.4rem;
+  right: -2.6rem;
   background: var(--primary);
   color: var(--secondary);
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(180deg);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
   font-size: 2.2rem;
+}
+
+.sidebar.close header .toggle{
+  transform: translateY(-50%);
 }
 
 .sidebar li {
@@ -111,6 +124,7 @@
 .menu-bar .mode {
   background: var(--primary);
   border-radius: 8px;
+  position: relative;
 }
 
 .menu-bar .mode .icons-mode {
@@ -129,8 +143,18 @@
   opacity: 0;
 }
 
+body.dark .menu-bar .mode i.sun {
+  opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+  opacity: 0;
+}
+
 .menu-bar .mode .toggle-switch {
+  position: absolute;
   height: 100%;
+  right: 0;
   min-width: 6rem;
   display: flex;
   align-items: center;
@@ -139,7 +163,7 @@
 
 .toggle-switch .switch {
   background: var(--secondary);
-  height: 2.2rem;
+  height: 2.6rem;
   width: 4.4rem;
   border-radius: 25px;
   position: relative;
